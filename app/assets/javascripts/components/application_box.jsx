@@ -4,7 +4,8 @@ class ApplicationBox extends React.Component {
 
         this.state = {
             authorized: false,
-            username: 'Unknown'
+            username: 'Unknown',
+            tabNumber: null
         }
     }
 
@@ -15,50 +16,33 @@ class ApplicationBox extends React.Component {
         })
     }
 
+    setTabNumber(tabNumber) {
+        this.setState({tabNumber});
+    }
+
+    getContent() {
+        if (this.state.authorized)
+            return (
+                <div>
+                    <Navigation setTabNumber={this.setTabNumber.bind(this)}/>
+                    {this.getAuthorizedContent()}
+                </div>)
+        else
+            return (<UnauthorizedBox/>)
+    }
+
+    getAuthorizedContent() {
+        switch (this.state.tabNumber) {
+            case 2:
+                return (<DirectionsBox/>)
+            case 3:
+                return (<GiftsBox/>)
+            default:
+                return (<WhatHappeningBox/>)
+        }
+    }
+
     render() {
-        return (
-            <div>
-                <section className="hero is-info is-bold is-fullheight">
-                    <div className="hero-head">
-                        <div className="container">
-                            <div className="tabs is-centered">
-                                <ul>
-                                    <li className="is-active">
-                                        <a>
-                                        <span className="icon"><i className="fa fa-home"></i></span>
-                                        <span>Что происходит?</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <span className="icon"><i className="fa fa-map-marker"></i></span>
-                                            <span>Как доехать?</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <span className="icon"><i className="fa fa-gift"></i></span>
-                                            <span>Что взять?</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="hero-body">
-                        <div className="container has-text-centered">
-                            <h1 className="title">
-                                Title
-                            </h1>
-                            <h2 className="subtitle">
-                                Subtitle
-                            </h2>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
-        );
+        return (this.getContent());
     }
 }
