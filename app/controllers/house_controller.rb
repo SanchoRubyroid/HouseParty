@@ -12,7 +12,11 @@ class HouseController < ApplicationController
 
     username = current_user ? current_user.name : 'Unauthorized'
 
-    render component: 'ApplicationBox', props: { authorized: current_user.present?, username: username }
+    render component: 'ApplicationBox', props: {
+        authorized: current_user.present?,
+        notifyUnauthorized: params[:auth_token].present?,
+        username: username
+    }
   end
 
   protected

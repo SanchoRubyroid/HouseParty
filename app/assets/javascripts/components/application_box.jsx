@@ -16,6 +16,11 @@ class ApplicationBox extends React.Component {
         })
     }
 
+    componentDidMount() {
+        if (this.state.authorized)
+            window.history.pushState(null, "", "/");
+    }
+
     setTabNumber(tabNumber) {
         this.setState({tabNumber});
     }
@@ -28,7 +33,7 @@ class ApplicationBox extends React.Component {
                     {this.getAuthorizedContent()}
                 </div>)
         else
-            return (<UnauthorizedBox/>)
+            return (<UnauthorizedBox notifyUnauthorized={this.props.notifyUnauthorized}/>)
     }
 
     getAuthorizedContent() {
