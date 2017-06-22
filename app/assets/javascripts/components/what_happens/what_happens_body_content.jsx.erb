@@ -1,0 +1,48 @@
+class WhatHappensBodyContent extends React.Component {
+    constructor() {
+        super();
+    }
+
+    render() {
+        const garage_src = '<%= image_path "house/garage.jpg" %>'
+        const concrete_src = '<%= image_path "house/concrete.jpg" %>'
+
+        return(
+            <div className="tile is-ancestor">
+                <div className="tile is-6 is-parent">
+                    <div className="tile is-child box">
+                        <p className="subtitle">
+                            <span className="icon is-medium"><i className="fa fa-home"></i></span>
+                            <span>The house was built!</span>
+                        </p>
+                        <figure className="image is-4by3">
+                            <img src={garage_src}/>
+                        </figure>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis
+                            placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
+                            purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus.
+                            Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi
+                            magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+                    </div>
+                </div>
+
+                <div className="tile is-6 is-parent">
+                    <div className="tile is-child box">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis
+                            placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida
+                            purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus.
+                            Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi
+                            magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.</p>
+
+                        <figure className="image is-4by3">
+                            <img src={concrete_src}/>
+                        </figure>
+
+
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
