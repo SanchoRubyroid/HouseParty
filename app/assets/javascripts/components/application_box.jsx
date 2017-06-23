@@ -23,6 +23,7 @@ class ApplicationBox extends React.Component {
 
     setTabNumber(tabNumber) {
         this.setState({tabNumber});
+        ReactDOM.findDOMNode(document.body).scrollTop = 0
     }
 
     getHeaderContent() {
