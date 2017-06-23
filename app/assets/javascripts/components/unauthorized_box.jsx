@@ -68,11 +68,11 @@ class UnauthorizedBox extends React.Component {
                                 </p>
 
                                 <p className="control">
-                                    <button className="button is-large is-primary" type="submit">
+                                    <button className={`button is-large is-primary ${this.state.loading ? 'is-loading' : ''}`} type="submit">
                                     <span className="icon is-medium">
-                                        <i className={`fa fa-universal-access ${this.state.loading ? 'fa-spin' : ''}`}></i>
+                                        <i className="fa fa-universal-access"></i>
                                     </span>
-                                        <span>Submit</span>
+                                        <span>Enter</span>
                                     </button>
                                 </p>
                             </div>

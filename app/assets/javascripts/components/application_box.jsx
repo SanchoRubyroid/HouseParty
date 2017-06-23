@@ -7,8 +7,6 @@ class ApplicationBox extends React.Component {
             username: 'Unknown',
             tabNumber: 0
         }
-
-        // this.contentSelector = new ContentSelector(0, this.setTabNumber.bind(this))
     }
 
     componentWillMount() {
@@ -25,17 +23,6 @@ class ApplicationBox extends React.Component {
 
     setTabNumber(tabNumber) {
         this.setState({tabNumber});
-        // this.contentSelector.set(tabNumber)
-    }
-
-    getContent() {
-        if (this.state.authorized)
-            return (
-                <div>
-                    {this.getAuthorizedContent()}
-                </div>)
-        else
-            return (<UnauthorizedBox notifyUnauthorized={this.props.notifyUnauthorized}/>)
     }
 
     getHeaderContent() {
@@ -49,19 +36,9 @@ class ApplicationBox extends React.Component {
         }
     }
 
-    getLink1Content() {
-        if (this.state.tabNumber == 0)
-            return (<DirectionsLinkContent setTabNumber={this.setTabNumber.bind(this)}/>)
-        else
-            return (<WhatHappensLinkContent setTabNumber={this.setTabNumber.bind(this)}/>)
-    }
-
-    getLink2Content() {
-        if (this.state.tabNumber == 2)
-            return (<DirectionsLinkContent setTabNumber={this.setTabNumber.bind(this)}/>)
-        else
-            return (<GiftsLinkContent setTabNumber={this.setTabNumber.bind(this)}/>)
-
+    getLinkContent(cutOffId) {
+        const contentId = (this.state.tabNumber == cutOffId ? 1 : cutOffId)
+        return(<LinkContent contentId={contentId} setTabNumber={this.setTabNumber.bind(this)}/>)
     }
 
     getBodyContent() {
@@ -81,18 +58,14 @@ class ApplicationBox extends React.Component {
                 <div className="container">
                     <div className="tile is-ancestor">
                         <div className="tile is-8 is-parent">
-                            {/*{this.contentSelector.getHeaderContent()}*/}
                             {this.getHeaderContent()}
                         </div>
                         <div className="tile is-vertical is-parent">
-                            {/*{this.contentSelector.getLink1Content()}*/}
-                            {this.getLink1Content()}
-                            {/*{this.contentSelector.getLink2Content()}*/}
-                            {this.getLink2Content()}
+                            {this.getLinkContent(0)}
+                            {this.getLinkContent(2)}
                         </div>
                     </div>
 
-                    {/*{this.contentSelector.getBodyContent()}*/}
                     {this.getBodyContent()}
 
                 </div>
@@ -101,6 +74,13 @@ class ApplicationBox extends React.Component {
     }
 
     render() {
-        return (this.getContent());
+        let content;
+
+        if (this.state.authorized)
+            content = this.getAuthorizedContent()
+        else
+            content = (<UnauthorizedBox notifyUnauthorized={this.props.notifyUnauthorized}/>)
+
+        return (content);
     }
 }
