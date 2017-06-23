@@ -21,3 +21,9 @@
   cursor: pointer;
   transform: rotateZ(3deg);
 }
+
+@media handheld {
+  .clickable:hover {
+    transform: none;
+  }
+}
