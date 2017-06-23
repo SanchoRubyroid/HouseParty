@@ -8,7 +8,7 @@ class WhatHappensHeaderContent extends React.Component {
             <div className="tile is-child notification is-info is-bold">
                 <p className="title">
                     <span className="icon is-large"><i className="fa fa-home"></i></span>
-                    <span>What's happening?</span>
+                    <span>{ContentVariables.getCaption(0)}</span>
                 </p>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat

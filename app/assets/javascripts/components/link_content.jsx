@@ -12,10 +12,9 @@ class LinkContent extends React.Component {
     }
 
     updateVariables(contentId) {
-        const contentVariables = new ContentVariables(contentId)
-        this.colorClass = contentVariables.getColorClass()
-        this.iconClass = contentVariables.getIconClass()
-        this.caption = contentVariables.getCaption()
+        this.colorClass = ContentVariables.getColorClass(contentId)
+        this.iconClass = ContentVariables.getIconClass(contentId)
+        this.caption = ContentVariables.getCaption(contentId)
     }
 
     render() {

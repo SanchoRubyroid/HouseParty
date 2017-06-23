@@ -8,7 +8,7 @@ class GiftsHeaderContent extends React.Component {
             <div className="tile is-child notification is-warning is-bold">
                 <p className="title">
                     <span className="icon is-large"><i className="fa fa-gift"></i></span>
-                    <span>Gifts list</span>
+                    <span>{ContentVariables.getCaption(2)}</span>
                 </p>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat

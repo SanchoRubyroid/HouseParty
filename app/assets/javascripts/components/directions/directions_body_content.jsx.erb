@@ -1,0 +1,51 @@
+class DirectionsBodyContent extends React.Component {
+    constructor() {
+        super();
+    }
+
+    render() {
+        const digger_src = '<%= image_path "directions/digger.png" %>'
+        const satellite_src = '<%= image_path "directions/satellite.png" %>'
+
+        return (
+            <div className="tile is-ancestor">
+              <div className="tile is-6 is-parent">
+                <div className="tile is-child box">
+                  <p className="subtitle">
+                    <span className="icon is-medium"><i className="fa fa-low-vision"></i></span>
+                    <span>&nbsp;Вроде он есть, но его как бы нет</span>
+                  </p>
+
+                  <div className="content">
+                    Действительно, наш точный адрес 4562 W Breezy Meadow Drive, однако Google Maps за нами пока
+                    не успевает. Если открыть Гугл карты, то оказывается Google профоткал нашу улицу, на которой
+                    на нашем Лоте 97 стоит не дом, а эксковатор.
+                  </div>
+
+                  <div className="content">
+                    <figure className="image is-4by3">
+                      <img src={digger_src}/>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+
+              <div className="tile is-6 is-parent">
+                <div className="tile is-child box">
+                  <div className="content">
+                    <figure className="image is-4by3">
+                      <img src={satellite_src}/>
+                    </figure>
+                  </div>
+
+                  <div className="content">
+                    Ситуация в корне меняется если включить в Google Maps Satellite layer. Нет, дом в этом случае не
+                    становится видимым, наоборот, вместо красивых дорожек нашему взору отрывается великолепный вид на
+                    пустое каменное поле, нежно покрытое немногочисленными кустиками.
+                  </div>
+                </div>
+              </div>
+            </div>
+        )
+    }
+}
