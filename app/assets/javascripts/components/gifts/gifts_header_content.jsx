@@ -4,18 +4,18 @@ class GiftsHeaderContent extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <div className="tile is-child notification is-warning is-bold">
                 <p className="title">
                     <span className="icon is-large"><i className="fa fa-gift"></i></span>
                     <span>{ContentVariables.getCaption(2)}</span>
                 </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat
-                    ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et
-                    dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et
-                    sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna,
-                    vehicula et sem eget, facilisis sodales sem.</p>
+                <div className="content">
+                    <p>
+                        Обязательно взять с собой хорошее настроение. Также берите с собой <s>бахилы</s> тапочки :) Опционально можно чтото подарить. Чтобы не ломать голову, мы с Олей подготовили список вещей, которые наиболее симпатичны нам на сегодняшний день.
+                    </p>
+                </div>
             </div>
         );
     }

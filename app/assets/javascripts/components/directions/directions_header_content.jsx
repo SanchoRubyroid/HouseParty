@@ -20,7 +20,7 @@ class DirectionsHeaderContent extends React.Component {
                     </div>
                     <div className="column">
                         <a className="button is-success is-inverted is-outlined is-fullwidth" target="_blank"
-                           href="http://maps.apple.com/maps?saddr=Current%20Location&daddr=40.491750,-111.999694">
+                           href="http://maps.apple.com/maps?saddr=Current+Location&daddr=4562+W+Breezy+Meadow+Drive,Herriman,UT,84096">
                             <span>Открыть в Apple Maps</span>
                         </a>
                     </div>
@@ -28,10 +28,14 @@ class DirectionsHeaderContent extends React.Component {
 
                 <div className="content">
                     <p>
-                        <strong>AHTUNG:</strong>&nbsp;Так как дом новый, нашего адреса не существует ни в Google Maps,
-                        ни в Apple Maps. На сегодняшний день самый точный адресс: <strong>40°29'30.3"N
-                        111°59'58.9"W</strong>. По приезду в эту локацию ищите дом с циферками&nbsp;
-                        <strong>4562</strong>
+                        Наш адрес: <strong>4562 W Breezy Meadow Dr, Herriman, UT, 84096</strong>
+                    </p>
+                </div>
+
+                <div className="content">
+                    <p>
+                        <strong>NOTE:</strong>&nbsp;Google Maps на сегодняшний день не знает нашего адреса, там нужно вводить: <strong>40°29'30.3"N
+                        111°59'58.9"W</strong>. Apple Maps уже знает наш адрес.
                     </p>
                 </div>
             </div>
