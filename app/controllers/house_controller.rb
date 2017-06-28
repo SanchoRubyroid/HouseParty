@@ -19,6 +19,10 @@ class HouseController < ApplicationController
     }
   end
 
+  def ajax_set_coming
+    current_user.set_coming!
+  end
+
   protected
 
   def authenticate

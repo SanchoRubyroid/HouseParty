@@ -4,8 +4,10 @@ class GiftsHeaderContent extends React.Component {
     }
 
     render() {
+        const colorClass = ContentVariables.getColorClass(2);
+
         return (
-            <div className="tile is-child notification is-warning is-bold">
+            <div className={`tile is-child notification ${colorClass}`}>
                 <p className="title">
                     <span className="icon is-large"><i className="fa fa-gift"></i></span>
                     <span>{ContentVariables.getCaption(2)}</span>

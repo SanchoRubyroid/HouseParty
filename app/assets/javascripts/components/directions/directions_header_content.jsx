@@ -4,8 +4,10 @@ class DirectionsHeaderContent extends React.Component {
     }
 
     render() {
+        const colorClass = ContentVariables.getColorClass(1);
+
         return (
-            <div className="tile is-child notification is-success is-bold">
+            <div className={`tile is-child notification ${colorClass}`}>
                 <p className="title">
                     <span className="icon is-large"><i className="fa fa-map-marker"></i></span>
                     <span>{ContentVariables.getCaption(1)}</span>
@@ -13,13 +15,13 @@ class DirectionsHeaderContent extends React.Component {
 
                 <div className="columns">
                     <div className="column">
-                        <a className="button is-success is-inverted is-outlined is-fullwidth" target="_blank"
+                        <a className={`button ${colorClass} is-inverted is-outlined is-fullwidth`} target="_blank"
                            href="https://www.google.com/maps/dir/Current+Location/40.491750,-111.999694">
                             <span>Открыть в Google Maps</span>
                         </a>
                     </div>
                     <div className="column">
-                        <a className="button is-success is-inverted is-outlined is-fullwidth" target="_blank"
+                        <a className={`button ${colorClass} is-inverted is-outlined is-fullwidth`} target="_blank"
                            href="http://maps.apple.com/maps?saddr=Current+Location&daddr=4562+W+Breezy+Meadow+Drive,Herriman,UT,84096">
                             <span>Открыть в Apple Maps</span>
                         </a>

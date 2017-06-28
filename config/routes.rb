@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root to: 'house#index'
 
   get '/:auth_token', to: 'house#index'
+  get '/set_coming', to: 'house#ajax_set_coming'
 end
