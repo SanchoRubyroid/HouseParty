@@ -32,16 +32,16 @@ class WhatHappensHeaderContent extends React.Component {
 
                 <div className="content">
                     <p>Дорогие друзья! Мы рады пригласить вас на наше новоселье, которое состоится в субботу 07/22/2017.
-                        Начало в 6:00pm</p>
+                        Начало в 6:00pm.</p>
                 </div>
 
-                <div className="content has-text-centered">
-                    <a className={`button ${colorClass} ${this.state.comingLoading ? 'is-loading' : 'is-inverted is-outlined'} ${this.state.coming && 'is-static'}`}
-                       disabled={this.state.coming} onClick={this.handleComing.bind(this)}>
-                        {this.state.coming && (<span className="icon"><i className="fa fa-check"></i></span>)}
-                        <span>Я с удовольствием приду!</span>
-                    </a>
-                </div>
+                {/*<div className="content has-text-centered">*/}
+                    {/*<a className={`button ${colorClass} ${this.state.comingLoading ? 'is-loading' : 'is-inverted is-outlined'} ${this.state.coming && 'is-static'}`}*/}
+                       {/*disabled={this.state.coming} onClick={this.handleComing.bind(this)}>*/}
+                        {/*{this.state.coming && (<span className="icon"><i className="fa fa-check"></i></span>)}*/}
+                        {/*<span>Я с удовольствием приду!</span>*/}
+                    {/*</a>*/}
+                {/*</div>*/}
             </div>
         );
     }

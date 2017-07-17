@@ -17,9 +17,17 @@
 @import "bulma";
 @import "font-awesome";
 
-.clickable:hover {
-  cursor: pointer;
-  transform: rotateZ(3deg);
+@media screen and (min-width: 800px) {
+  .clickable:hover {
+    cursor: pointer;
+    transform: rotateZ(3deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .clickable:hover {
+    cursor: pointer;
+  }
 }
 
 @media handheld {
