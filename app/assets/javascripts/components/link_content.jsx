@@ -22,7 +22,7 @@ class LinkContent extends React.Component {
             <div className={`tile is-child notification ${this.colorClass} clickable`} onClick={() => this.props.setTabNumber(this.props.contentId)}>
                 <p className="title">
                     <span className="icon is-large"><i className={`fa ${this.iconClass}`}></i></span>
-                    <span>{this.caption}</span>
+                    <span>&nbsp;{this.caption}</span>
                 </p>
             </div>
         );

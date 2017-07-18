@@ -5,11 +5,11 @@ ContentVariables = {
     },
 
     getIconClass: function(contentId) {
-        return(['fa-home', 'fa-map-marker', 'fa-gift'][contentId])
+        return(['fa-home', 'fa-map-marker', 'fa-photo'][contentId])
     },
 
     getCaption: function(contentId) {
-        return(["Что происходит", 'Как доехать', 'Что взять'][contentId])
+        return(["Что происходит", 'Как доехать', 'Что было'][contentId])
     }
 
 

@@ -31,7 +31,7 @@ class ApplicationBox extends React.Component {
             case 1:
                 return (<DirectionsHeaderContent/>)
             case 2:
-                return (<GiftsHeaderContent/>)
+                return (<WhatHappenedHeaderContent/>)
             default:
                 return (<WhatHappensHeaderContent/>)
         }
@@ -47,7 +47,7 @@ class ApplicationBox extends React.Component {
             case 1:
                 return (<DirectionsBodyContent/>)
             case 2:
-                return (<GiftsBodyContent/>)
+                return (<WhatHappenedBodyContent/>)
             default:
                 return (<WhatHappensBodyContent/>)
         }
